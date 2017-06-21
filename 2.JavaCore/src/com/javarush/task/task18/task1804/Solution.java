@@ -30,7 +30,7 @@ public class Solution {
         }
         fileInputStream.close();
 
-        // байтов с максимальным количеством повторов может быть несколько
+        // байтов с минимальным количеством повторов может быть несколько
         ArrayList<Integer> resultArrayList = new ArrayList<>();
         for (Map.Entry entry : hashMap.entrySet()) {
             int counter = (int) entry.getValue();
