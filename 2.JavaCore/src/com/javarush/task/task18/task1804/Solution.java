@@ -1,15 +1,14 @@
-package com.javarush.task.task18.task1803;
+package com.javarush.task.task18.task1804;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 
 /* 
-Самые частые байты
+Самые редкие байты
 */
 
 public class Solution {
@@ -19,7 +18,6 @@ public class Solution {
         bufferedReader.close();
 
         HashMap<Integer, Integer> hashMap = new HashMap<>();
-        int maximum = 1;
         while (fileInputStream.available() > 0) {
             int value = fileInputStream.read();
             if (!hashMap.containsKey(value)) {
@@ -28,9 +26,6 @@ public class Solution {
                 int count = hashMap.get(value);
                 count++;
                 hashMap.put(value, count);
-                if (count > maximum) {
-                    maximum = count;
-                }
             }
         }
         fileInputStream.close();
@@ -39,7 +34,7 @@ public class Solution {
         ArrayList<Integer> resultArrayList = new ArrayList<>();
         for (Map.Entry entry : hashMap.entrySet()) {
             int counter = (int) entry.getValue();
-            if (counter == maximum) {
+            if (counter == 1) {
                 resultArrayList.add((int) entry.getKey());
             }
         }
