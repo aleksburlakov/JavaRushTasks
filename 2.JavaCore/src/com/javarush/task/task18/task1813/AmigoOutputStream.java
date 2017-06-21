@@ -17,11 +17,11 @@ public class AmigoOutputStream extends FileOutputStream {
         super(name);
     }
 
-    public AmigoOutputStream(FileOutputStream fileOutputStream) {
-        super(fileOutputStream);
-    }
+    //public AmigoOutputStream(FileOutputStream fileOutputStream) {
+        //super(fileOutputStream);
+    //}
 
-    public static void main(String[] args) throws FileNotFoundException {
-        new AmigoOutputStream(new FileOutputStream(fileName));
-    }
+    //public static void main(String[] args) throws FileNotFoundException {
+    //    new AmigoOutputStream(new FileOutputStream(fileName));
+    //}
 }
